@@ -1,0 +1,43 @@
+:root{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+}
+
+html, body{
+    height: 100vh;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.TimerApp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Timer{
+    flex: auto;
+    text-align: center;
+    font-size: 30rem;
+    margin-bottom: 2rem;
+}
+
+.Buttons{
+    flex: auto;
+
+    display: flex;
+}
+
+button{
+    flex: auto;
+    margin-right: 1em;
+    font-size: 2em;
+}
