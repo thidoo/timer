@@ -1,8 +1,7 @@
 import React from 'react';
 import Timer from './Timer/Timer';
 import TimerService from './Timer/TimerService';
-// import Button from './Button/Button';
-import { Button } from "@myob/myob-widgets";
+import MyButton from './Button/MyButton';
 
 import './TimerApp.css';
 
@@ -101,8 +100,8 @@ class TimerApp extends React.Component{
       <div className="TimerApp">
         <Timer timeRemained = {this.timerService.format(this.state.timeRemained)}/>
         <div className="Buttons">
-          <Button className="LeftButton" buttonText={this.state.leftButtonText} onClick={this.handleStopStart}/>
-          <Button className="RightButton" buttonText={this.state.rightButtonText} onClick={this.handleReset}/>
+          <MyButton className="LeftButton" buttonText={this.state.leftButtonText} onClick={this.handleStopStart}/>
+          <MyButton className="RightButton" buttonText={this.state.rightButtonText} onClick={this.handleReset}/>
         </div>
       </div>
     );
