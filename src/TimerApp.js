@@ -2,13 +2,15 @@ import React from 'react';
 import Timer from './Timer/Timer';
 import TimerService from './Timer/TimerService';
 import MyButton from './Button/MyButton';
-
+import alarmSound from './res/alarm.mp3';
 import './TimerApp.css';
 
 class TimerApp extends React.Component{
 
   MAX_TIME = 5*1000;
   UPDATE_FREQUENCY = 1000;
+
+  alarm = new Audio(alarmSound);
 
   START = "START";
   RUNNING = "RUNNING";
@@ -48,10 +50,11 @@ class TimerApp extends React.Component{
             });
           }
           else{
+            this.alarm.play();
             this.setState({
               runningState: this.START,
               leftButtonText: this.START
-            })
+            });
           }
           break;
         case this.PAUSED:
@@ -98,7 +101,7 @@ class TimerApp extends React.Component{
   render(){
     return (
       <div className="TimerApp">
-        <Timer timeRemained = {this.timerService.format(this.state.timeRemained)}/>
+        <div className="TimerWrapper"><Timer timeRemained = {this.timerService.format(this.state.timeRemained)}/></div>
         <div className="Buttons">
           <MyButton className="LeftButton" buttonText={this.state.leftButtonText} onClick={this.handleStopStart}/>
           <MyButton className="RightButton" buttonText={this.state.rightButtonText} onClick={this.handleReset}/>

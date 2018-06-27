@@ -1,0 +1,21 @@
+button {
+  flex: auto;
+  border-radius: 5px;
+  font-size: 4vh;
+
+  margin: 0 5px 0 5px;
+
+  color: black;
+}
+
+.start{
+  background-color: #28a745;
+}
+
+.stop{
+  background-color: #dc3545;
+}
+
+.reset{
+  background-color: #ffc107;
+}

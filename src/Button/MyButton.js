@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button } from "@myob/myob-widgets";
+// import { Button } from "@myob/myob-widgets";
+import './MyButton.css';
 
 class MyButton extends React.Component{
   constructor(props){
@@ -8,9 +9,9 @@ class MyButton extends React.Component{
 
   render(){
     return(
-      <Button type="primary" onClick={() => this.props.onClick()}>
+      <button className={this.props.buttonText.toLowerCase()} onClick={() => this.props.onClick()}>
         {this.props.buttonText}
-      </Button>
+      </button>
     )
   }
 }
