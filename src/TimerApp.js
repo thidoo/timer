@@ -7,7 +7,7 @@ import './TimerApp.css';
 
 class TimerApp extends React.Component{
 
-  MAX_TIME = 5*1000;
+  MAX_TIME = 5*60*1000;
   UPDATE_FREQUENCY = 1000;
 
   alarm = new Audio(alarmSound);
