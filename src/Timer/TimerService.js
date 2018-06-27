@@ -6,7 +6,7 @@ class TimerService {
   }
 
   computeNumberWithTwoDigits = (number) => {
-    return (number < 10 ? '0' : ' ') + number;
+    return (number < 10 ? '0' : '') + number;
   };
 
   computeMinute = (milliseconds) => {
